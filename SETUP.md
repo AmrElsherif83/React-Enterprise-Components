@@ -23,6 +23,19 @@ npm run build
 npm run preview
 ```
 
+## Deploy to GitHub Pages
+
+Before the first deployment, a repository administrator must open
+[Settings → Pages](https://github.com/AmrElsherif83/React-Enterprise-Components/settings/pages)
+and select **GitHub Actions** under **Build and deployment → Source**.
+The workflow's `GITHUB_TOKEN` can deploy to an existing Pages site, but cannot
+enable Pages for the repository.
+
+Push to `main` or manually run **Deploy to GitHub Pages** from the Actions tab.
+The workflow checks the Pages configuration, builds the site, and deploys `dist`.
+If deployment fails with HTTP 404 / “Ensure GitHub Pages has been enabled”,
+verify the source setting above, then re-run the workflow.
+
 ## Stack
 - Vite 8 + React 18 + TypeScript 5
 - Tailwind CSS v4
